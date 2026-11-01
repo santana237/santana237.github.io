@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Politique de confidentialité de MonChar.">
+  <title>Confidentialité · MonChar</title>
+  <style>
+    :root{color-scheme:light;--ink:#132422;--muted:#586b67;--brand:#0f6253;--line:#dce8e4;--bg:#f1f6f4}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    main{max-width:760px;margin:0 auto;padding:42px 20px 64px}.brand{font-weight:800;letter-spacing:.04em;color:var(--brand);text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15}p{color:var(--muted)}a{color:var(--brand);overflow-wrap:anywhere}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;margin:18px 0}
+    .button{display:inline-block;margin:8px 0;padding:12px 18px;border-radius:999px;background:var(--brand);color:white;text-decoration:none;font-weight:700}footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body><main>
+  <div class="brand">MonChar</div>
+  <h1>Politique de confidentialité</h1>
+  <p>Dernière mise à jour : 1er novembre 2026</p>
+  <h2>Qui est responsable</h2>
+  <p>MonChar est publiée par CYBERNET. Contact pour toute question sur tes renseignements : support@cybernet.host.</p>
+  <h2>En bref</h2>
+  <p>MonChar n'a <strong>aucun serveur</strong>, <strong>aucun compte</strong> et <strong>aucun service d'analyse</strong>. Ce que tu saisis ou ce que ton téléphone mesure reste sur ton téléphone. Le responsable de MonChar ne reçoit aucune de ces données.</p>
+  <h2>Ce que MonChar traite, et où c'est gardé</h2>
+  <p>Tout est gardé <strong>uniquement sur ton appareil</strong> :</p>
+  <ul>
+    <li><strong>Ta position</strong> : lue quand tu cherches ton auto ou notes ta place, pour détecter la ville et calculer des distances. Elle n'est conservée que si tu notes une place (voir plus bas) ; sur l'écran de la carte de l'auto, ta position en direct n'est qu'affichée.</li>
+    <li><strong>Ta place</strong> : coordonnées, heure, adresse lue par le géocodeur du système (si disponible), note éventuelle, et la façon dont elle a été notée (à la main, automatique, raccourci).</li>
+    <li><strong>Ta plaque</strong> : seulement si tu la saisis ; gardée si tu coches « Retenir ma plaque » ou la saisis dans les réglages. Elle n'est jamais copiée dans le presse-papiers.</li>
+    <li><strong>Protection contre le vol</strong> : une empreinte SHA-256 (non lisible) des plaques cherchées, gardée 24 h, pour limiter à 3 plaques différentes par jour, et l'empreinte des plaques pour lesquelles tu as attesté être propriétaire.</li>
+    <li><strong>Historique de stationnement</strong> (MonChar+, facultatif) : tes places des 30 derniers jours.</li>
+    <li><strong>Lecture de panneau</strong> (MonChar+) : la photo que tu prends d'un panneau de stationnement est lue sur ton téléphone et n'est envoyée nulle part.</li>
+    <li><strong>Tes réglages</strong> : plaque, thème, statut MonChar+.</li>
+    <li><strong>Stationnement automatique</strong> (si tu l'actives) : réglages de la détection (mode, auto Bluetooth choisie : nom et adresse de l'appareil), état de conduite, et sur iPhone de courtes positions récentes gardées temporairement pour retrouver l'endroit où tu t'es garé. Rien de cela ne quitte ton téléphone.</li>
+  </ul>
+  <p>MonChar ne lit ni ne conserve ton identité, tes contacts, ta photothèque ni un identifiant publicitaire.</p>
+  <h2>Services tiers réellement contactés</h2>
+  <p>MonChar n'envoie pas tes données à ses propres serveurs, mais l'app contacte les services suivants, qui reçoivent au minimum ton adresse IP et les informations techniques d'une requête web :</p>
+  <ul>
+    <li><strong>Portail de données ouvertes de la Ville de Montréal</strong> (<code>donnees.montreal.ca</code>) : pour chercher ton auto à Montréal, l'app télécharge des pages des remorquages publiés. La recherche et le filtre par distance se font <strong>sur ton appareil</strong> : le portail ne reçoit ni ta position ni ta plaque, seulement la requête (identifiant du jeu, taille de page, tri). Les données sont sous licence CC-BY 4.0 et ne contiennent pas de plaque.</li>
+    <li><strong>Serveurs de tuiles OpenStreetMap</strong> (<code>tile.openstreetmap.org</code>) : l'affichage d'une carte télécharge les tuiles des zones affichées. Les serveurs voient donc les zones de carte demandées (qui peuvent correspondre à ta position approximative ou à l'endroit de ton auto) et ton adresse IP. L'app s'identifie par <code>MonChar/1.0 (ca.vsptech.monchar)</code>.</li>
+    <li><strong>Géocodeur du système</strong> (Apple sur iPhone ; Google ou le service de ton appareil sur Android) : pour trouver la ville et l'adresse d'un point, l'app lui envoie des <strong>coordonnées</strong>. Ce service est régi par la politique de son fournisseur, pas par MonChar.</li>
+    <li><strong>Sites municipaux ouverts dans l'app</strong> (Ville de Montréal, Ville de Québec, et les pages de sources de chaque fiche) : ces pages sont affichées dans l'app. <strong>Ta plaque n'est envoyée à la Ville que lorsque tu lances toi-même la recherche</strong> (« Rechercher » sur le site) ; l'app ne fait que préremplir le champ. Ces sites ont leurs propres politiques et peuvent utiliser des cookies et un service anti-robot (reCAPTCHA, de Google, sur la page de Montréal). MonChar lit sur la page de résultat l'adresse, la date et le lien de carte affichés, localement, pour te montrer ton auto sur sa carte.</li>
+    <li><strong>Plans (iPhone) ou Google Maps (Android)</strong> : quand tu touches « Itinéraire », la destination (coordonnées de ton auto) est transmise à cette application de cartes, ou à son site si elle n'est pas installée, qui peut y ajouter ta position selon sa propre politique.</li>
+    <li><strong>Google Play services</strong> (Android) : le stationnement automatique utilise ses API de position et de reconnaissance d'activité ; leur traitement relève de la politique de Google.</li>
+    <li><strong>Appels et liens</strong> : les numéros de téléphone ouvrent l'application Téléphone ; les liens de sources s'ouvrent dans le navigateur intégré de l'appareil.</li>
+  </ul>
+  <p>MonChar ne vend ni ne partage tes données et n'en tire aucun profil.</p>
+  <h2>Permissions</h2>
+  <p>En résumé :</p>
+  <ul>
+    <li><strong>Localisation</strong> (précise et approximative) : détecter la ville, noter ta place, calculer la distance. Facultative : tu peux choisir l'endroit sur la carte.</li>
+    <li><strong>Localisation en arrière-plan / « Toujours »</strong> : seulement pour le stationnement automatique, afin de noter ta place quand tu sors de l'auto. Facultative.</li>
+    <li><strong>Reconnaissance d'activité / mouvement</strong> : reconnaître le passage voiture → marche. Facultative.</li>
+    <li><strong>Bluetooth</strong> (Android) : choisir ton auto parmi les appareils appairés et détecter sa déconnexion. Facultative.</li>
+    <li><strong>Notifications</strong> : afficher « Ta place est notée ». Facultative.</li>
+    <li><strong>Démarrage de l'appareil</strong> (Android) : remettre la détection en place après un redémarrage. Facultative.</li>
+  </ul>
+  <p>Tu peux retirer chaque permission à tout moment dans les réglages de ton téléphone.</p>
+  <h2>Durée de conservation et suppression</h2>
+  <p>Les données restent sur ton appareil tant que tu ne les supprimes pas :</p>
+  <ul>
+    <li>« Je l'ai reprise » efface la place notée ;</li>
+    <li>Réglages → Mes données : effacer la place, la plaque (et les empreintes anti-vol), l'historique, ou tout effacer ;</li>
+    <li>désactiver le stationnement automatique arrête la détection (et efface les positions récentes gardées sur iPhone) ;</li>
+    <li><strong>désinstaller MonChar supprime toutes les données de l'app</strong>.</li>
+  </ul>
+  <p>Comme MonChar n'a pas de serveur ni de compte, il n'y a aucune donnée à demander au responsable ni à faire effacer à distance. Les services tiers de la section précédente conservent leurs propres journaux, selon leurs politiques.</p>
+  <h2>Publicité et achats intégrés</h2>
+  <ul>
+    <li><strong>MonChar+</strong> (abonnement annuel ou achat à vie) passe par l'App Store ou Google Play ; MonChar ne voit jamais tes informations de paiement et garde seulement, sur l'appareil, le fait que MonChar+ est actif.</li>
+    <li><strong>Publicité</strong> (sans MonChar+) : une bannière Google AdMob, annonces <strong>non personnalisées</strong>, seulement sur les écrans calmes (guide, fiche de ville, réglages), jamais pendant la recherche de ton auto. Le SDK ne démarre qu'à l'affichage de la bannière. Google reçoit des informations techniques sur l'appareil et l'adresse IP, selon sa politique.</li>
+  </ul>
+  <h2>Enfants</h2>
+  <p>MonChar ne s'adresse pas aux enfants et ne collecte rien à leur sujet.</p>
+  <h2>Changements</h2>
+  <p>Toute modification importante sera indiquée ici avec une nouvelle date de mise à jour, et l'app renverra à la version en ligne.</p>
+  <h2>Nous joindre</h2>
+  <p>CYBERNET — support@cybernet.host</p>
+  <h2 lang="en-CA">Summary in English</h2>
+  <section class="card" lang="en-CA">
+    <p>MonChar has no server, no account and no analytics. Your location, parking spot and plate stay on your phone. The app contacts third parties only as needed: the City of Montréal open data portal, OpenStreetMap map tiles, your phone's geocoder, municipal websites, your maps app, and Google AdMob for non-personalized banners when you do not have MonChar+. MonChar+ is sold through the App Store or Google Play, and MonChar never sees your payment details. You can erase your data in Settings, and uninstalling MonChar removes it. Contact: <a href="mailto:support@cybernet.host">support@cybernet.host</a>.</p>
+  </section>
+  <p><a href="/monchar/support/">Assistance / Support</a></p>
+  <footer>CYBERNET · <a href="mailto:support@cybernet.host">support@cybernet.host</a></footer>
+</main></body>
+</html>
